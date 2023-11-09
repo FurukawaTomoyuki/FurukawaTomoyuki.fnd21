@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIGカレッジ 最終課題</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div>
+    <h1>DIGカレッジ プログラミング基礎</h1>
+  </div>
+  <h2>◆自己紹介◆</h2>
+  <ul>
+    <li>名前　　　　　　：古川智之</li>
+    <li>所属　　　　　　：電子性能開発部 第2試験課</li>
+    <li>担当業務　　　　：部品信頼性評価</li>
+    <li>プログラム経験　：ほぼ初心者。独学でPythonのさわりを学び、ちょっとした改善を実施したことがある程度。</li>
+    <li>受講理由　　　　：プログラミングに興味があったが、独学での限界を感じていた為、自身のスキルを向上させたいという思いから受講を決意。</li>
+  </ul>
+  <h2>◆作成物◆　～謎解きゲーム～</h2>
+  <div>
+    <button class="start" onclick="(function() {
+      gameStart('quiz1');
+      })()">謎解きゲームにチャレンジ！</button>
+  </div>
+  <div id="quiz1">
+    <h1>◆1問目◆</h1>
+    <img src="img/Q1.jpg"><br>
+    <input id="acd-check1" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check1">ヒントはこちら</label>
+    <div class="acd-content">
+      <p>右側の言葉を英語に変換すると…？</p>
+    </div><br>
+    <input type="text" id="q1_text" cols="40" placeholder="答えを入力してね" maxlength="5"><br>
+    <button class="btn" onclick="(function() {
+      let val = q1_text.value;
+      check(val, '看護師', 'quiz2');
+      })();">答える！
+    </button>
+  </div>
+  <div id="quiz2">
+    <h1>◆2問目◆</h1>
+    <img src="img/Q2.jpg"><br>
+    <input id="acd-check2" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check2">ヒントはこちら</label>
+    <div class="acd-content">
+      <p>4つの国だよ！</p>
+    </div><br>
+    <input type="text" id="q2_text" cols="10" placeholder="答えを入力してね" maxlength="5"><br>
+    <button class="btn" onclick="(function() {
+      let val = q2_text.value;
+      check(val, 'と', 'quiz3');
+      })();">答える！
+    </button>    
+  </div>
+  <div id="quiz3">
+    <h1>◆3問目◆</h1>
+    <img src="img/Q3.jpg"><br>
+    <input id="acd-check3" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check3">ヒントはこちら</label>
+    <div class="acd-content">
+      <p>数字を別の書き方にしてみよう！</p>
+    </div><br>
+    <input type="text" id="q3_text" cols="10" placeholder="答えを入力してね" maxlength="5"><br>
+    <button class="btn" onclick="(function() {
+      let val = q3_text.value;
+      check(val, '4', 'quiz4');
+      })();">答える！
+    </button>    
+  </div>
+  <div id="quiz4">
+    <h1>◆4問目◆</h1>
+    <img src="img/Q4.jpg"><br>
+    <input id="acd-check4" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check4">ヒントはこちら</label>
+    <div class="acd-content">
+      <p>苗は「ナエ」下は「シタ」室は「ムロ」、採否は「サイヒ」と読みます</p>
+    </div><br>
+    <input type="text" id="q4_text" cols="10" placeholder="答えを入力してね" maxlength="5"><br>
+    <button class="btn" onclick="(function() {
+      let val = q4_text.value;
+      check(val, '花', 'quiz5');
+      })();">答える！
+    </button>    
+  </div>
+  <div id="quiz5">
+    <h1>◆5問目◆</h1>
+    <img src="img/Q5.jpg"><br>
+    <input id="acd-check5" class="acd-check" type="checkbox">
+    <label class="acd-label" for="acd-check5">ヒントはこちら</label>
+    <div class="acd-content">
+      <p>声に出して読むと分かるかも</p>
+    </div><br>
+    <input type="text" id="q5_text" cols="10" placeholder="答えを入力してね" maxlength="5"><br>
+    <button class="btn" onclick="(function() {
+      let val = q5_text.value;
+      check(val, 'イヌ', 'quiz6');
+      })();">答える！
+    </button>    
+  </div>
+  <h2>◆学んだ点◆</h2>
+  <ul>
+    <li>ロジックの考え方・テスト駆動開発の考え方を学び、どのようにすれば条件がクリア出来るかを順序立てて考えられるようになった。</li>
+    <li>ペアプロを通して、コードの書き方・説明の仕方を考えることで、第3者が見てわかりやすい書き方を考えられるようになった。</li>
+    <li>講義後も受講者同士で相談・アドバイスを交わして演習問題を突破し、またそれぞれが書くコードや考え方に違いや気づきがあり学びを得られ、共に学ぶ仲間の大切さを学んだ。</li>
+  </ul>
+  <h2>◆所感◆</h2>
+  <ul>
+    <p>受講前は少なからずプログラミングに対する抵抗感があったが、課題やペアプロを楽しめて取り組むことが出来、<br>
+      現在ではプログラミングが楽しく感じるようになった。今後はもっとプログラミングの奥深さに触れてみたいと感じた。<br>
+      最後に、講師の皆さん、21期の皆さん本当にありがとうございました！</p>
+  </ul><br><br><br>
+</body>
+</html>
